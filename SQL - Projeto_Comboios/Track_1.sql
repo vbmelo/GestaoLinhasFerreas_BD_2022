@@ -1,0 +1,22 @@
+use Comboios2;
+
+INSERT INTO Track(trid,name) VALUES ('b987eebe-993b-4307-835b-699d0f925224','Layo');
+INSERT INTO Track(trid,name) VALUES ('c0ed0d9e-50c7-4f95-bb5d-934369764d12','Devpoint');
+INSERT INTO Track(trid,name) VALUES ('b11ea690-8507-4b4f-9935-4008d4340646','Skalith');
+INSERT INTO Track(trid,name) VALUES ('12892de7-eb8a-475f-b8ee-d939848de3a1','Zoozzy');
+INSERT INTO Track(trid,name) VALUES ('001aa506-a8a5-4b9a-ac12-fec83db950de','Quamba');
+INSERT INTO Track(trid,name) VALUES ('5422f2f1-7a17-4e06-abb2-c28e490d1163','Yozio');
+INSERT INTO Track(trid,name) VALUES ('c8b35fa4-c838-445a-bd1d-06648642f258','Jayo');
+INSERT INTO Track(trid,name) VALUES ('bd019e21-6293-4da0-a6b4-aa2d9efcc817','Flashspan');
+INSERT INTO Track(trid,name) VALUES ('2d464d98-df80-4c18-a5ce-15df28fd1bbf','Plajo');
+INSERT INTO Track(trid,name) VALUES ('1be493f0-600e-4481-9774-1919c3f15387','Muxo');
+INSERT INTO Track(trid,name) VALUES ('842b4194-74ad-4160-a8a0-19d69df60935','Voonder');
+INSERT INTO Track(trid,name) VALUES ('5220f4c6-818a-4e44-a92d-e43e03b8ee6d','Rhyzio');
+INSERT INTO Track(trid,name) VALUES ('60d90632-3a88-4114-bc71-5d2761fc6a36','Rhyloo');
+INSERT INTO Track(trid,name) VALUES ('ed980c95-d9e4-42a6-ad4c-8151455f10d1','Browsecat');
+INSERT INTO Track(trid,name) VALUES ('643dc6e6-7cc1-4b23-80f8-b88b5a7c6b89','Gabtype');
+INSERT INTO Track(trid,name) VALUES ('5bb295bb-ba0b-4e22-b2ef-a7a8d0354c77','Linklinks');
+INSERT INTO Track(trid,name) VALUES ('10f74ed0-1740-42f4-9468-e4a89f0b8f42','Zoomdog');
+INSERT INTO Track(trid,name) VALUES ('c14f04dd-3aa4-4300-b91e-0f08b9eb3957','Jabbercube');
+INSERT INTO Track(trid,name) VALUES ('c771ffa7-917b-411b-9602-c76f4f807b67','Flipstorm');
+INSERT INTO Track(trid,name) VALUES ('27d8f673-ac44-4a97-9b18-73f55445af89','Trupe');
