@@ -141,11 +141,12 @@ namespace App_GLF
             // 
             // logoDetiUa
             // 
-            this.logoDetiUa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.logoDetiUa.Image = global::App_GLF.Properties.Resources.logoDetiUa_removebg_preview;
+            this.logoDetiUa.BackColor = System.Drawing.Color.Transparent;
+            this.logoDetiUa.BackgroundImage = global::App_GLF.Properties.Resources.logoDetiUa_removebg_preview;
+            this.logoDetiUa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.logoDetiUa.Location = new System.Drawing.Point(-1, -1);
             this.logoDetiUa.Name = "logoDetiUa";
-            this.logoDetiUa.Size = new System.Drawing.Size(622, 110);
+            this.logoDetiUa.Size = new System.Drawing.Size(622, 93);
             this.logoDetiUa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.logoDetiUa.TabIndex = 9;
             this.logoDetiUa.TabStop = false;
