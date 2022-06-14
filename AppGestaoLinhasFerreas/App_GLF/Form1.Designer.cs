@@ -39,6 +39,7 @@ namespace App_GLF
             this.btn_connect_db = new System.Windows.Forms.Button();
             this.logoDetiUa = new System.Windows.Forms.PictureBox();
             this.fundoComboios = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoDetiUa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fundoComboios)).BeginInit();
             this.SuspendLayout();
@@ -163,12 +164,27 @@ namespace App_GLF
             this.fundoComboios.TabStop = false;
             this.fundoComboios.Click += new System.EventHandler(this.fundoComboios_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::App_GLF.Properties.Resources.cancel__Custom_;
+            this.button1.Location = new System.Drawing.Point(1238, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 25);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // mainpanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(1273, 721);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.logoDetiUa);
             this.Controls.Add(this.btn_connect_db);
             this.Controls.Add(this.password);
@@ -203,6 +219,7 @@ namespace App_GLF
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Button btn_connect_db;
         private System.Windows.Forms.PictureBox logoDetiUa;
+        private System.Windows.Forms.Button button1;
     }
 }
 

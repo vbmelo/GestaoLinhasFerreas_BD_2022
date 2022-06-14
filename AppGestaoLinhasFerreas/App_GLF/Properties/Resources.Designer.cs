@@ -73,9 +73,29 @@ namespace App_GLF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("cancel (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fundo_Train_Preto_e_Branco {
             get {
                 object obj = ResourceManager.GetObject("Fundo Train Preto e Branco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap log_out__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("log-out (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,16 @@ namespace App_GLF.Properties {
         internal static System.Drawing.Bitmap logoDetiUa_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("logoDetiUa-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("logout (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
