@@ -11,11 +11,18 @@ using System.Windows.Forms;
 
 namespace App_GLF
 {
-    public partial class Form1 : Form
+    public partial class mainpanel : Form
     {
-        public Form1()
+        public mainpanel()
         {
             InitializeComponent();
+
+            /*
+             Conexão automática com a BD, retirar para o login
+             */
+            string dbServer = "DESKTOP-77GBOEO";
+            string initialCatalog = "Comboios2";
+            AutoConnectDB(dbServer, initialCatalog);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -38,13 +45,19 @@ namespace App_GLF
 
         }
 
-        private void address_TextChanged(object sender, EventArgs e)
+        private void server_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            LoadIndex();
+            string dbServer = server.Text;
+            string useraNme = username.Text;
+            string passWord = password.Text;
+            TestDBConnection(dbServer, useraNme, passWord);
 
         }
 
@@ -68,10 +81,43 @@ namespace App_GLF
 
         }
 
-        private void TestDBConnection(string dbServer, string dbName, string userName, string userPass)
+        private void LoadIndex()
         {
-            SqlConnection CN = new SqlConnection("Data Source = " + dbServer + " ;" + "Initial Catalog = " + dbName +
-                                                       "; uid = " + userName + ";" + "password = " + userPass);
+            Index index = new Index();
+            index.Dock = DockStyle.Fill;
+            index.Tag = index;
+            index.FormBorderStyle = FormBorderStyle.None;
+            index.Show();
+        }
+
+        private void AutoConnectDB(string dbServer, string initialCatalog)
+        {
+            SqlConnection CN = new SqlConnection("Data Source = " + dbServer + "; Initial Catalog=" + initialCatalog + "; Integrated Security=SSPI;");
+
+            try
+            {
+                CN.Open();
+                if (CN.State == ConnectionState.Open)
+                {
+                    MessageBox.Show("Successful connection to database " + CN.Database + " on the " + CN.DataSource + " server", "Connection Test", MessageBoxButtons.OK);
+                    /*Se a conexão foi bem sucedida, carregue o outro form de Index!*/
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED TO OPEN CONNECTION TO DATABASE DUE TO THE FOLLOWING ERROR \r\n" + ex.Message, "Connection Test", MessageBoxButtons.OK);
+            }
+
+            if (CN.State == ConnectionState.Open)
+                CN.Close();
+        }
+
+
+
+        private void TestDBConnection(string dbServer, string userName, string userPass)
+        {
+            SqlConnection CN = new SqlConnection("Data Source = " + dbServer + "; uid = " + userName + ";" + "password = " + userPass);
 
             try
             {

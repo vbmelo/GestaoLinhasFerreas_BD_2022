@@ -1,7 +1,7 @@
 ﻿
 namespace App_GLF
 {
-    partial class Form1
+    partial class mainpanel
     {
         /// <summary>
         /// Required designer variable.
@@ -101,7 +101,7 @@ namespace App_GLF
             this.server.Name = "server";
             this.server.Size = new System.Drawing.Size(475, 27);
             this.server.TabIndex = 5;
-            this.server.TextChanged += new System.EventHandler(this.address_TextChanged);
+            this.server.TextChanged += new System.EventHandler(this.server_TextChanged);
             // 
             // username
             // 
@@ -163,7 +163,7 @@ namespace App_GLF
             this.fundoComboios.TabStop = false;
             this.fundoComboios.Click += new System.EventHandler(this.fundoComboios_Click);
             // 
-            // Form1
+            // mainpanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,7 +180,7 @@ namespace App_GLF
             this.Controls.Add(this.tituloLogin);
             this.Controls.Add(this.fundoComboios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "mainpanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
