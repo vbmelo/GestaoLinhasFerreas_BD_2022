@@ -16,7 +16,7 @@ namespace App_GLF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainpanel());
+            Application.Run(new loginPanel());
         }
     }
 }

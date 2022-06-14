@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\LinhasFerreas\\LinhasFerreas\\LinhasFerreas.csproj": {}
+    "C:\\Users\\vb\\Documents\\Aulas 2.0\\Ano 2 - 2 Semestre 21-22\\BD\\GestaoLinhasFerreas_BD_2022\\LinhasFerreas\\LinhasFerreas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\LinhasFerreas\\LinhasFerreas\\LinhasFerreas.csproj": {
+    "C:\\Users\\vb\\Documents\\Aulas 2.0\\Ano 2 - 2 Semestre 21-22\\BD\\GestaoLinhasFerreas_BD_2022\\LinhasFerreas\\LinhasFerreas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\LinhasFerreas\\LinhasFerreas\\LinhasFerreas.csproj",
+        "projectUniqueName": "C:\\Users\\vb\\Documents\\Aulas 2.0\\Ano 2 - 2 Semestre 21-22\\BD\\GestaoLinhasFerreas_BD_2022\\LinhasFerreas\\LinhasFerreas.csproj",
         "projectName": "LinhasFerreas",
-        "projectPath": "C:\\Users\\User\\source\\repos\\LinhasFerreas\\LinhasFerreas\\LinhasFerreas.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\LinhasFerreas\\LinhasFerreas\\obj\\",
+        "projectPath": "C:\\Users\\vb\\Documents\\Aulas 2.0\\Ano 2 - 2 Semestre 21-22\\BD\\GestaoLinhasFerreas_BD_2022\\LinhasFerreas\\LinhasFerreas.csproj",
+        "packagesPath": "C:\\Users\\vb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vb\\Documents\\Aulas 2.0\\Ano 2 - 2 Semestre 21-22\\BD\\GestaoLinhasFerreas_BD_2022\\LinhasFerreas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "System.Data.SqlClient": {
               "target": "Package",
@@ -61,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }

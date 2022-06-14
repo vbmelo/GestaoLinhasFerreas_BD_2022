@@ -34,6 +34,30 @@ namespace App_GLF
         {
 
         }
+        private bool CheckOpened(string name)
+        {
+            FormCollection fc = Application.OpenForms;
+
+            foreach (Form frm in fc)
+            {
+                if (frm.Text == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void LoadTicket()
+        {
+            TicketForm ticket = new TicketForm();
+            ticket.TopLevel = false;
+            ticket.Dock = DockStyle.Right;
+            ticket.Tag = ticket;
+            ticket.FormBorderStyle = FormBorderStyle.None;
+            this.Controls.Add(ticket);
+            ticket.Show();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -41,6 +65,7 @@ namespace App_GLF
             PnlNav.Top = btnTickets.Top;
             PnlNav.Left = btnTickets.Left;
             btnTickets.BackColor = Color.FromArgb(46, 51, 73);
+            LoadTicket();
         }
 
         private void btnPesquisa_Click(object sender, EventArgs e)
@@ -70,6 +95,7 @@ namespace App_GLF
         private void btnTickets_Leave(object sender, EventArgs e)
         {
             btnTickets.BackColor = Color.FromArgb(20, 20, 20);
+            
         }
 
         private void btnPesquisa_Leave(object sender, EventArgs e)
