@@ -42,22 +42,30 @@ namespace App_GLF
             {
                 if (frm.Text == name)
                 {
+                    frm.Close();
                     return true;
                 }
             }
             return false;
         }
 
-        private void LoadTicket()
+        private void LoadForm(object Form, string nome)
         {
-            TicketForm ticket = new TicketForm();
-            ticket.TopLevel = false;
-            ticket.Dock = DockStyle.Right;
-            ticket.Tag = ticket;
-            ticket.FormBorderStyle = FormBorderStyle.None;
-            this.Controls.Add(ticket);
-            ticket.Show();
+            Form f = Form as Form;
+            if (CheckOpened(nome))
+            {
+                f.Hide();
+            } else
+            {
+                f.TopLevel = false;
+                f.Dock = DockStyle.Right;
+                this.Controls.Add(f);
+                this.Tag = f;
+                f.Show();
+            }
+            
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -65,7 +73,7 @@ namespace App_GLF
             PnlNav.Top = btnTickets.Top;
             PnlNav.Left = btnTickets.Left;
             btnTickets.BackColor = Color.FromArgb(46, 51, 73);
-            LoadTicket();
+            LoadForm(new TicketForm(), "TicketForm");
         }
 
         private void btnPesquisa_Click(object sender, EventArgs e)
@@ -74,6 +82,7 @@ namespace App_GLF
             PnlNav.Top = btnPesquisa.Top;
             PnlNav.Left = btnPesquisa.Left;
             btnPesquisa.BackColor = Color.FromArgb(46, 51, 73);
+            LoadForm(new PesquisaForm(), "PesquisaForm");
         }
 
         private void btnComboios_Click(object sender, EventArgs e)
@@ -82,6 +91,7 @@ namespace App_GLF
             PnlNav.Top = btnComboios.Top;
             PnlNav.Left = btnComboios.Left;
             btnComboios.BackColor = Color.FromArgb(46, 51, 73);
+            LoadForm(new ComboiosForms(), "ComboiosForm");
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -90,12 +100,12 @@ namespace App_GLF
             PnlNav.Top = btnLogout.Top;
             PnlNav.Left = btnLogout.Left;
             btnLogout.BackColor = Color.FromArgb(46, 51, 73);
+            Application.Exit();
         }
 
         private void btnTickets_Leave(object sender, EventArgs e)
         {
             btnTickets.BackColor = Color.FromArgb(20, 20, 20);
-            
         }
 
         private void btnPesquisa_Leave(object sender, EventArgs e)

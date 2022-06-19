@@ -11,3 +11,5 @@ C:\Users\vb\Documents\Aulas 2.0\Ano 2 - 2 Semestre 21-22\BD\GestaoLinhasFerreas_
 C:\Users\vb\Documents\Aulas 2.0\Ano 2 - 2 Semestre 21-22\BD\GestaoLinhasFerreas_BD_2022\AppGestaoLinhasFerreas\App_GLF\obj\Debug\App_GLF.loginPanel.resources
 C:\Users\vb\Documents\Aulas 2.0\Ano 2 - 2 Semestre 21-22\BD\GestaoLinhasFerreas_BD_2022\AppGestaoLinhasFerreas\App_GLF\obj\Debug\LinhasFerreas.Form1.resources
 C:\Users\vb\Documents\Aulas 2.0\Ano 2 - 2 Semestre 21-22\BD\GestaoLinhasFerreas_BD_2022\AppGestaoLinhasFerreas\App_GLF\obj\Debug\App_GLF.TicketForm.resources
+C:\Users\vb\Documents\Aulas 2.0\Ano 2 - 2 Semestre 21-22\BD\GestaoLinhasFerreas_BD_2022\AppGestaoLinhasFerreas\App_GLF\obj\Debug\App_GLF.ComboiosForms.resources
+C:\Users\vb\Documents\Aulas 2.0\Ano 2 - 2 Semestre 21-22\BD\GestaoLinhasFerreas_BD_2022\AppGestaoLinhasFerreas\App_GLF\obj\Debug\App_GLF.PesquisaForm.resources
