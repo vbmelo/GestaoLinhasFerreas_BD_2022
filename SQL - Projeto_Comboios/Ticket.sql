@@ -1,4 +1,4 @@
-use Comboios2;
+use Comboios3;
 
 INSERT INTO Ticket(tid,[sid],pid,eid,trainid,[date],destinationStation,carriage,seatNO) VALUES ('a56a0b0b-a22c-45c6-83f1-2735a9863f5f','d86e50b2-0ea4-40f4-b27c-0cd25e734a89','cdb1ce5a-c7d6-4ac9-8b2d-b8b8564f5e5c','70255e40-c26f-4ba3-a014-f05f01227a1c','85e260f9-00c6-4f16-95e7-2e212ac54d92','2/7/2022','Lukolela',50,51);
 INSERT INTO Ticket(tid,[sid],pid,eid,trainid,[date],destinationStation,carriage,seatNO) VALUES ('87c15d66-e4c5-49d6-9807-fee0d60aa8c6','71ea27af-4d1d-4a75-9287-63aa0d4b8840','28ac9824-1656-4886-910d-bb57b312addf','60ea4f52-5193-421f-852c-6625eedeed5c','69851db0-2785-4f33-adfa-0fef400aec30','4/28/2022','Pskov',57,51);

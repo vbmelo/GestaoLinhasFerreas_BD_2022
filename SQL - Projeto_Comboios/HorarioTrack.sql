@@ -1,3 +1,4 @@
+Use Comboios3;
 INSERT INTO HorarioTrack(idHora,trid) VALUES ('583a4728-e442-4157-b30e-0c18aac74bee','5220f4c6-818a-4e44-a92d-e43e03b8ee6d');
 INSERT INTO HorarioTrack(idHora,trid) VALUES ('5358bca1-bd41-4f88-88d6-4f964fc53211','27d8f673-ac44-4a97-9b18-73f55445af89');
 INSERT INTO HorarioTrack(idHora,trid) VALUES ('3fe2234e-8f62-4ce0-948f-588bbd749bd3','001aa506-a8a5-4b9a-ac12-fec83db950de');

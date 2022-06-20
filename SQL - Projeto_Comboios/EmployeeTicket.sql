@@ -1,3 +1,4 @@
+use Comboios3;
 INSERT INTO EmployeeTicket(eid,tid) VALUES ('a7308eaa-7cf9-4cc1-92ca-d315ad2e113e','34d5fae7-7a3c-4400-afee-85f6a99c7b1a');
 INSERT INTO EmployeeTicket(eid,tid) VALUES ('10eeb408-0113-4c81-9fd0-631e74f15bc2','ed594238-59d9-4764-adbd-8ac359101114');
 INSERT INTO EmployeeTicket(eid,tid) VALUES ('053687a0-7ae0-448f-8909-edec7c57f10b','87c15d66-e4c5-49d6-9807-fee0d60aa8c6');

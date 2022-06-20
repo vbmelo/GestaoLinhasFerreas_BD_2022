@@ -1,4 +1,4 @@
-use Comboios2;
+use Comboios3;
 
 INSERT INTO Horario(idHora,horaChegada,horaPartida) VALUES ('419a644e-a92d-45ed-8351-58342e385652','4:33 PM','1:01 PM');
 INSERT INTO Horario(idHora,horaChegada,horaPartida) VALUES ('4c6d337d-1adb-44a1-84e6-39bc6cc1dfd1','11:56 AM','10:41 AM');

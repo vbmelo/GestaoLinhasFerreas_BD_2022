@@ -1,3 +1,4 @@
+use Comboios3;
 INSERT INTO Station([sid],[name],[location],rid) VALUES ('b99cf490-8500-4071-a1d9-0615233c853a','Eazzy','7 Texas Terrace','84fcfe09-9222-42d0-ba92-f2efba010b9e');
 INSERT INTO Station([sid],[name],[location],rid) VALUES ('833678dd-e222-42ad-9e19-784e5de717a8','Aimbo','79993 Green Ridge Circle','c588a4c4-f03f-4bd2-b51b-62ede45b8287');
 INSERT INTO Station([sid],[name],[location],rid) VALUES ('4628aae3-f217-46ff-8385-613f9c038ace','Oyope','0020 Kedzie Court','56d7fcd8-36a1-441d-b9a6-c9cdaeaef9af');

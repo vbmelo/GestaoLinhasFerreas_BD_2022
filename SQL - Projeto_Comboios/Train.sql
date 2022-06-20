@@ -1,4 +1,4 @@
-use Comboios2;
+use Comboios3;
 
 INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('f74b8a4c-7a30-44fb-8b06-37049361e779','Babblestorm',82,'79b63958-6828-4180-97bf-08f46b80e250','c14f04dd-3aa4-4300-b91e-0f08b9eb3957');
 INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('e2c44e7f-dbba-4a9c-9909-139470b76190','Gabvine',85,'d061f124-7517-400e-b9fb-fdd6352bf3e4','5bb295bb-ba0b-4e22-b2ef-a7a8d0354c77');

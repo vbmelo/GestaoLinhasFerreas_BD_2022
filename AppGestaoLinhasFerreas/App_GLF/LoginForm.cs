@@ -31,10 +31,11 @@ namespace App_GLF
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             /*
              Conexão automática com a BD, retirar para o login
-             */
             string dbServer = "DESKTOP-77GBOEO";
             string initialCatalog = "Comboios2";
             AutoConnectDB(dbServer, initialCatalog);
+             */
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -66,10 +67,12 @@ namespace App_GLF
         {
             this.Hide();
             LoadIndex();
+            /*
             string dbServer = server.Text;
             string useraNme = username.Text;
             string passWord = password.Text;
             TestDBConnection(dbServer, useraNme, passWord);
+            */
 
         }
 

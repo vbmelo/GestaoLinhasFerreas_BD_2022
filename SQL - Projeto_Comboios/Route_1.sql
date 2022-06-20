@@ -1,3 +1,5 @@
+use Comboios3;
+
 INSERT INTO [Route](rid,name) VALUES ('4d26f9bc-ea89-4c01-8788-cf3fbfddfbd5','Gerrie');
 INSERT INTO [Route](rid,name) VALUES ('8bb09adf-057d-4997-a7b9-d1ac7e6e900d','Paula');
 INSERT INTO [Route](rid,name) VALUES ('ee7cc67b-6aa7-4cff-8b1e-06bcdc77d2a9','Karlie');

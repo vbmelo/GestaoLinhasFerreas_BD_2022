@@ -1,3 +1,4 @@
+Use Comboios3;
 INSERT INTO HorarioStation(idHora,sid) VALUES ('1c19e49c-1393-4fad-9211-1e005418ef42','3e0d1700-7838-4af5-b380-3e3c735e8f72');
 INSERT INTO HorarioStation(idHora,sid) VALUES ('5cc76afb-d536-4ce9-9b8b-8faa735c0c1e','e495e4cc-a152-4633-b510-c60c7353f3b0');
 INSERT INTO HorarioStation(idHora,sid) VALUES ('1300eb60-0470-4e16-bd2c-297c09e911d8','50e682cb-7466-4175-923b-8dd49df9863d');
