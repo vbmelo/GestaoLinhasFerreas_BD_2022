@@ -31,6 +31,20 @@ namespace App_GLF
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketForm));
             this.ticketFormTabs = new System.Windows.Forms.TabControl();
+            this.ticketUsuarioExistente = new System.Windows.Forms.TabPage();
+            this.listaHorariosDasRotas = new System.Windows.Forms.ListBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dataViagem = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.listaRotas = new System.Windows.Forms.ListBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.ticketNovoUsuario = new System.Windows.Forms.TabPage();
             this.btnGenerateID = new System.Windows.Forms.Button();
             this.mskCC = new System.Windows.Forms.MaskedTextBox();
@@ -54,24 +68,10 @@ namespace App_GLF
             this.CC = new System.Windows.Forms.Label();
             this.apelido = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.ticketUsuarioExistente = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dataViagem = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.listaRotas = new System.Windows.Forms.ListBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.listaHorariosDasRotas = new System.Windows.Forms.ListBox();
             this.ticketFormTabs.SuspendLayout();
+            this.ticketUsuarioExistente.SuspendLayout();
             this.ticketNovoUsuario.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.ticketUsuarioExistente.SuspendLayout();
             this.SuspendLayout();
             // 
             // ticketFormTabs
@@ -84,255 +84,6 @@ namespace App_GLF
             this.ticketFormTabs.SelectedIndex = 0;
             this.ticketFormTabs.Size = new System.Drawing.Size(976, 676);
             this.ticketFormTabs.TabIndex = 0;
-            // 
-            // ticketNovoUsuario
-            // 
-            this.ticketNovoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ticketNovoUsuario.Controls.Add(this.btnGenerateID);
-            this.ticketNovoUsuario.Controls.Add(this.mskCC);
-            this.ticketNovoUsuario.Controls.Add(this.mskPhone);
-            this.ticketNovoUsuario.Controls.Add(this.txtId);
-            this.ticketNovoUsuario.Controls.Add(this.label1);
-            this.ticketNovoUsuario.Controls.Add(this.toolStrip1);
-            this.ticketNovoUsuario.Controls.Add(this.txtAge);
-            this.ticketNovoUsuario.Controls.Add(this.txtLastname);
-            this.ticketNovoUsuario.Controls.Add(this.txtFirstname);
-            this.ticketNovoUsuario.Controls.Add(this.idade);
-            this.ticketNovoUsuario.Controls.Add(this.phone);
-            this.ticketNovoUsuario.Controls.Add(this.CC);
-            this.ticketNovoUsuario.Controls.Add(this.apelido);
-            this.ticketNovoUsuario.Controls.Add(this.label4);
-            this.ticketNovoUsuario.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ticketNovoUsuario.ForeColor = System.Drawing.Color.White;
-            this.ticketNovoUsuario.Location = new System.Drawing.Point(4, 22);
-            this.ticketNovoUsuario.Name = "ticketNovoUsuario";
-            this.ticketNovoUsuario.Padding = new System.Windows.Forms.Padding(3);
-            this.ticketNovoUsuario.Size = new System.Drawing.Size(968, 650);
-            this.ticketNovoUsuario.TabIndex = 0;
-            this.ticketNovoUsuario.Text = "NovoUsuario";
-            this.ticketNovoUsuario.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // btnGenerateID
-            // 
-            this.btnGenerateID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerateID.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerateID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.btnGenerateID.Location = new System.Drawing.Point(302, 56);
-            this.btnGenerateID.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGenerateID.Name = "btnGenerateID";
-            this.btnGenerateID.Size = new System.Drawing.Size(111, 27);
-            this.btnGenerateID.TabIndex = 52;
-            this.btnGenerateID.Text = "Gerar ID";
-            this.btnGenerateID.UseVisualStyleBackColor = true;
-            this.btnGenerateID.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // mskCC
-            // 
-            this.mskCC.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCC.Location = new System.Drawing.Point(118, 195);
-            this.mskCC.Mask = "999-000-0000";
-            this.mskCC.Name = "mskCC";
-            this.mskCC.Size = new System.Drawing.Size(295, 27);
-            this.mskCC.TabIndex = 51;
-            this.mskCC.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
-            // 
-            // mskPhone
-            // 
-            this.mskPhone.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskPhone.Location = new System.Drawing.Point(118, 244);
-            this.mskPhone.Mask = "999-000-0000";
-            this.mskPhone.Name = "mskPhone";
-            this.mskPhone.Size = new System.Drawing.Size(295, 27);
-            this.mskPhone.TabIndex = 50;
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(118, 56);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(176, 27);
-            this.txtId.TabIndex = 49;
-            this.txtId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 60);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 22);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "id:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.toolStrip1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNovo,
-            this.tsbCancelar,
-            this.tsbSalvar,
-            this.tsbAlterar,
-            this.tsbExcluir,
-            this.tstIdBuscar,
-            this.idParaBuscar,
-            this.tsbBuscar});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(962, 25);
-            this.toolStrip1.TabIndex = 47;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // tsbNovo
-            // 
-            this.tsbNovo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbNovo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNovo.Image")));
-            this.tsbNovo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbNovo.Name = "tsbNovo";
-            this.tsbNovo.Size = new System.Drawing.Size(23, 22);
-            this.tsbNovo.Text = "Novo";
-            // 
-            // tsbCancelar
-            // 
-            this.tsbCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbCancelar.Image = global::App_GLF.Properties.Resources.cancel__Custom_;
-            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(23, 22);
-            this.tsbCancelar.Text = "Cancelar";
-            // 
-            // tsbSalvar
-            // 
-            this.tsbSalvar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSalvar.Image = ((System.Drawing.Image)(resources.GetObject("tsbSalvar.Image")));
-            this.tsbSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSalvar.Name = "tsbSalvar";
-            this.tsbSalvar.Size = new System.Drawing.Size(23, 22);
-            this.tsbSalvar.Text = "Salvar";
-            this.tsbSalvar.Click += new System.EventHandler(this.tsbSalvar_Click);
-            // 
-            // tsbAlterar
-            // 
-            this.tsbAlterar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbAlterar.Image = ((System.Drawing.Image)(resources.GetObject("tsbAlterar.Image")));
-            this.tsbAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAlterar.Name = "tsbAlterar";
-            this.tsbAlterar.Size = new System.Drawing.Size(23, 22);
-            this.tsbAlterar.Text = "Alterar";
-            // 
-            // tsbExcluir
-            // 
-            this.tsbExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbExcluir.Image = ((System.Drawing.Image)(resources.GetObject("tsbExcluir.Image")));
-            this.tsbExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbExcluir.Name = "tsbExcluir";
-            this.tsbExcluir.Size = new System.Drawing.Size(23, 22);
-            this.tsbExcluir.Text = "Excluir";
-            // 
-            // tstIdBuscar
-            // 
-            this.tstIdBuscar.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tstIdBuscar.ForeColor = System.Drawing.Color.White;
-            this.tstIdBuscar.Name = "tstIdBuscar";
-            this.tstIdBuscar.Size = new System.Drawing.Size(99, 22);
-            this.tstIdBuscar.Text = "Buscar por ID:";
-            this.tstIdBuscar.Click += new System.EventHandler(this.tstIdBuscar_Click);
-            // 
-            // idParaBuscar
-            // 
-            this.idParaBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.idParaBuscar.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idParaBuscar.ForeColor = System.Drawing.Color.White;
-            this.idParaBuscar.Name = "idParaBuscar";
-            this.idParaBuscar.Size = new System.Drawing.Size(100, 25);
-            this.idParaBuscar.Click += new System.EventHandler(this.toolStripTextBox1_Click);
-            // 
-            // tsbBuscar
-            // 
-            this.tsbBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscar.Image")));
-            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbBuscar.Name = "tsbBuscar";
-            this.tsbBuscar.Size = new System.Drawing.Size(23, 22);
-            this.tsbBuscar.Text = "Buscar";
-            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
-            // 
-            // txtAge
-            // 
-            this.txtAge.Location = new System.Drawing.Point(118, 291);
-            this.txtAge.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(295, 27);
-            this.txtAge.TabIndex = 33;
-            // 
-            // txtLastname
-            // 
-            this.txtLastname.Location = new System.Drawing.Point(118, 146);
-            this.txtLastname.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(295, 27);
-            this.txtLastname.TabIndex = 30;
-            // 
-            // txtFirstname
-            // 
-            this.txtFirstname.Location = new System.Drawing.Point(118, 101);
-            this.txtFirstname.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(295, 27);
-            this.txtFirstname.TabIndex = 29;
-            // 
-            // idade
-            // 
-            this.idade.AutoSize = true;
-            this.idade.Location = new System.Drawing.Point(24, 291);
-            this.idade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.idade.Name = "idade";
-            this.idade.Size = new System.Drawing.Size(59, 22);
-            this.idade.TabIndex = 28;
-            this.idade.Text = "Idade:";
-            // 
-            // phone
-            // 
-            this.phone.AutoSize = true;
-            this.phone.Location = new System.Drawing.Point(24, 244);
-            this.phone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(66, 22);
-            this.phone.TabIndex = 27;
-            this.phone.Text = "Phone:";
-            // 
-            // CC
-            // 
-            this.CC.AutoSize = true;
-            this.CC.Location = new System.Drawing.Point(24, 194);
-            this.CC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.CC.Name = "CC";
-            this.CC.Size = new System.Drawing.Size(37, 22);
-            this.CC.TabIndex = 26;
-            this.CC.Text = "CC:";
-            // 
-            // apelido
-            // 
-            this.apelido.AutoSize = true;
-            this.apelido.Location = new System.Drawing.Point(24, 153);
-            this.apelido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.apelido.Name = "apelido";
-            this.apelido.Size = new System.Drawing.Size(74, 22);
-            this.apelido.TabIndex = 25;
-            this.apelido.Text = "Apelido:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 105);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 22);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Nome:";
             // 
             // ticketUsuarioExistente
             // 
@@ -359,6 +110,18 @@ namespace App_GLF
             this.ticketUsuarioExistente.TabIndex = 1;
             this.ticketUsuarioExistente.Text = "Comprar Ticket";
             this.ticketUsuarioExistente.Click += new System.EventHandler(this.ticketUsuarioExistente_Click);
+            // 
+            // listaHorariosDasRotas
+            // 
+            this.listaHorariosDasRotas.FormattingEnabled = true;
+            this.listaHorariosDasRotas.ItemHeight = 22;
+            this.listaHorariosDasRotas.Items.AddRange(new object[] {
+            "Selecionar Rota"});
+            this.listaHorariosDasRotas.Location = new System.Drawing.Point(479, 189);
+            this.listaHorariosDasRotas.Margin = new System.Windows.Forms.Padding(4);
+            this.listaHorariosDasRotas.Name = "listaHorariosDasRotas";
+            this.listaHorariosDasRotas.Size = new System.Drawing.Size(300, 26);
+            this.listaHorariosDasRotas.TabIndex = 39;
             // 
             // button6
             // 
@@ -487,17 +250,259 @@ namespace App_GLF
             this.label8.TabIndex = 24;
             this.label8.Text = "CC:";
             // 
-            // listaHorariosDasRotas
+            // ticketNovoUsuario
             // 
-            this.listaHorariosDasRotas.FormattingEnabled = true;
-            this.listaHorariosDasRotas.ItemHeight = 22;
-            this.listaHorariosDasRotas.Items.AddRange(new object[] {
-            "Selecionar Rota"});
-            this.listaHorariosDasRotas.Location = new System.Drawing.Point(479, 189);
-            this.listaHorariosDasRotas.Margin = new System.Windows.Forms.Padding(4);
-            this.listaHorariosDasRotas.Name = "listaHorariosDasRotas";
-            this.listaHorariosDasRotas.Size = new System.Drawing.Size(300, 26);
-            this.listaHorariosDasRotas.TabIndex = 39;
+            this.ticketNovoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ticketNovoUsuario.Controls.Add(this.btnGenerateID);
+            this.ticketNovoUsuario.Controls.Add(this.mskCC);
+            this.ticketNovoUsuario.Controls.Add(this.mskPhone);
+            this.ticketNovoUsuario.Controls.Add(this.txtId);
+            this.ticketNovoUsuario.Controls.Add(this.label1);
+            this.ticketNovoUsuario.Controls.Add(this.toolStrip1);
+            this.ticketNovoUsuario.Controls.Add(this.txtAge);
+            this.ticketNovoUsuario.Controls.Add(this.txtLastname);
+            this.ticketNovoUsuario.Controls.Add(this.txtFirstname);
+            this.ticketNovoUsuario.Controls.Add(this.idade);
+            this.ticketNovoUsuario.Controls.Add(this.phone);
+            this.ticketNovoUsuario.Controls.Add(this.CC);
+            this.ticketNovoUsuario.Controls.Add(this.apelido);
+            this.ticketNovoUsuario.Controls.Add(this.label4);
+            this.ticketNovoUsuario.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketNovoUsuario.ForeColor = System.Drawing.Color.White;
+            this.ticketNovoUsuario.Location = new System.Drawing.Point(4, 22);
+            this.ticketNovoUsuario.Name = "ticketNovoUsuario";
+            this.ticketNovoUsuario.Padding = new System.Windows.Forms.Padding(3);
+            this.ticketNovoUsuario.Size = new System.Drawing.Size(968, 650);
+            this.ticketNovoUsuario.TabIndex = 0;
+            this.ticketNovoUsuario.Text = "NovoUsuario";
+            this.ticketNovoUsuario.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // btnGenerateID
+            // 
+            this.btnGenerateID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerateID.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.btnGenerateID.Location = new System.Drawing.Point(514, 59);
+            this.btnGenerateID.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGenerateID.Name = "btnGenerateID";
+            this.btnGenerateID.Size = new System.Drawing.Size(111, 27);
+            this.btnGenerateID.TabIndex = 52;
+            this.btnGenerateID.Text = "Gerar Novo ID";
+            this.btnGenerateID.UseVisualStyleBackColor = true;
+            this.btnGenerateID.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // mskCC
+            // 
+            this.mskCC.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCC.Location = new System.Drawing.Point(106, 198);
+            this.mskCC.Mask = "999-000-0000";
+            this.mskCC.Name = "mskCC";
+            this.mskCC.Size = new System.Drawing.Size(100, 27);
+            this.mskCC.TabIndex = 51;
+            this.mskCC.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
+            // mskPhone
+            // 
+            this.mskPhone.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskPhone.Location = new System.Drawing.Point(286, 201);
+            this.mskPhone.Mask = "999-000-0000";
+            this.mskPhone.Name = "mskPhone";
+            this.mskPhone.Size = new System.Drawing.Size(101, 27);
+            this.mskPhone.TabIndex = 50;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(106, 59);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(391, 27);
+            this.txtId.TabIndex = 49;
+            this.txtId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(70, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 22);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "id:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.toolStrip1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNovo,
+            this.tsbCancelar,
+            this.tsbSalvar,
+            this.tsbAlterar,
+            this.tsbExcluir,
+            this.tstIdBuscar,
+            this.idParaBuscar,
+            this.tsbBuscar});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(962, 25);
+            this.toolStrip1.TabIndex = 47;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tsbNovo
+            // 
+            this.tsbNovo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbNovo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNovo.Image")));
+            this.tsbNovo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNovo.Name = "tsbNovo";
+            this.tsbNovo.Size = new System.Drawing.Size(23, 22);
+            this.tsbNovo.Text = "Novo";
+            this.tsbNovo.Click += new System.EventHandler(this.tsbNovo_Click);
+            // 
+            // tsbCancelar
+            // 
+            this.tsbCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbCancelar.Image = global::App_GLF.Properties.Resources.cancel__Custom_;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(23, 22);
+            this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
+            // 
+            // tsbSalvar
+            // 
+            this.tsbSalvar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbSalvar.Image = ((System.Drawing.Image)(resources.GetObject("tsbSalvar.Image")));
+            this.tsbSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSalvar.Name = "tsbSalvar";
+            this.tsbSalvar.Size = new System.Drawing.Size(23, 22);
+            this.tsbSalvar.Text = "Salvar";
+            this.tsbSalvar.Click += new System.EventHandler(this.tsbSalvar_Click);
+            // 
+            // tsbAlterar
+            // 
+            this.tsbAlterar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAlterar.Image = ((System.Drawing.Image)(resources.GetObject("tsbAlterar.Image")));
+            this.tsbAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAlterar.Name = "tsbAlterar";
+            this.tsbAlterar.Size = new System.Drawing.Size(23, 22);
+            this.tsbAlterar.Text = "Alterar";
+            this.tsbAlterar.Click += new System.EventHandler(this.tsbAlterar_Click);
+            // 
+            // tsbExcluir
+            // 
+            this.tsbExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbExcluir.Image = ((System.Drawing.Image)(resources.GetObject("tsbExcluir.Image")));
+            this.tsbExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbExcluir.Name = "tsbExcluir";
+            this.tsbExcluir.Size = new System.Drawing.Size(23, 22);
+            this.tsbExcluir.Text = "Excluir";
+            this.tsbExcluir.Click += new System.EventHandler(this.tsbExcluir_Click);
+            // 
+            // tstIdBuscar
+            // 
+            this.tstIdBuscar.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tstIdBuscar.ForeColor = System.Drawing.Color.White;
+            this.tstIdBuscar.Name = "tstIdBuscar";
+            this.tstIdBuscar.Size = new System.Drawing.Size(99, 22);
+            this.tstIdBuscar.Text = "Buscar por ID:";
+            this.tstIdBuscar.Click += new System.EventHandler(this.tstIdBuscar_Click);
+            // 
+            // idParaBuscar
+            // 
+            this.idParaBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.idParaBuscar.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idParaBuscar.ForeColor = System.Drawing.Color.White;
+            this.idParaBuscar.Name = "idParaBuscar";
+            this.idParaBuscar.Size = new System.Drawing.Size(100, 25);
+            this.idParaBuscar.Click += new System.EventHandler(this.toolStripTextBox1_Click);
+            // 
+            // tsbBuscar
+            // 
+            this.tsbBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscar.Image")));
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(23, 22);
+            this.tsbBuscar.Text = "Buscar";
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
+            // 
+            // txtAge
+            // 
+            this.txtAge.Location = new System.Drawing.Point(452, 201);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(45, 27);
+            this.txtAge.TabIndex = 33;
+            // 
+            // txtLastname
+            // 
+            this.txtLastname.Location = new System.Drawing.Point(106, 149);
+            this.txtLastname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(391, 27);
+            this.txtLastname.TabIndex = 30;
+            // 
+            // txtFirstname
+            // 
+            this.txtFirstname.Location = new System.Drawing.Point(106, 104);
+            this.txtFirstname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(391, 27);
+            this.txtFirstname.TabIndex = 29;
+            // 
+            // idade
+            // 
+            this.idade.AutoSize = true;
+            this.idade.Location = new System.Drawing.Point(394, 204);
+            this.idade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idade.Name = "idade";
+            this.idade.Size = new System.Drawing.Size(59, 22);
+            this.idade.TabIndex = 28;
+            this.idade.Text = "Idade:";
+            // 
+            // phone
+            // 
+            this.phone.AutoSize = true;
+            this.phone.Location = new System.Drawing.Point(213, 201);
+            this.phone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(66, 22);
+            this.phone.TabIndex = 27;
+            this.phone.Text = "Phone:";
+            // 
+            // CC
+            // 
+            this.CC.AutoSize = true;
+            this.CC.Location = new System.Drawing.Point(61, 201);
+            this.CC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CC.Name = "CC";
+            this.CC.Size = new System.Drawing.Size(37, 22);
+            this.CC.TabIndex = 26;
+            this.CC.Text = "CC:";
+            // 
+            // apelido
+            // 
+            this.apelido.AutoSize = true;
+            this.apelido.Location = new System.Drawing.Point(24, 149);
+            this.apelido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.apelido.Name = "apelido";
+            this.apelido.Size = new System.Drawing.Size(74, 22);
+            this.apelido.TabIndex = 25;
+            this.apelido.Text = "Apelido:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(35, 104);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 22);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Nome:";
             // 
             // TicketForm
             // 
@@ -512,12 +517,12 @@ namespace App_GLF
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TicketForm";
             this.ticketFormTabs.ResumeLayout(false);
+            this.ticketUsuarioExistente.ResumeLayout(false);
+            this.ticketUsuarioExistente.PerformLayout();
             this.ticketNovoUsuario.ResumeLayout(false);
             this.ticketNovoUsuario.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.ticketUsuarioExistente.ResumeLayout(false);
-            this.ticketUsuarioExistente.PerformLayout();
             this.ResumeLayout(false);
 
         }
