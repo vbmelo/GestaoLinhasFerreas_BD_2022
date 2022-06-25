@@ -9,20 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
 namespace App_GLF
 {
+
     public partial class TicketForm : Form
     {
-        public TicketForm()
+        //SqlConnection CN = null;
+        /*Alterar a string strCon para a vossa base de dados.*/
+        private string strCon = @"Data Source=DESKTOP-77GBOEO;Initial Catalog=Comboios5;Integrated Security=True";
+        private string strSql = string.Empty;
+        /*Alterar a string CN para a vossa base de dados.*/
+        SqlConnection CN = new SqlConnection(@"Data Source=DESKTOP-77GBOEO;Initial Catalog=Comboios5;Integrated Security=True");
+        public TicketForm(SqlConnection CN)
         {
             InitializeComponent();
             carregarRotas();
+            carregarUsuarios();
         }
-
-        SqlConnection sqlCon = null;
-        private string strCon = @"Data Source=DESKTOP-77GBOEO;Initial Catalog=Comboios3;Integrated Security=True";
-        private string strSql = string.Empty;
 
         private void TicketForm_Load(object sender, EventArgs e)
         {
@@ -47,6 +50,7 @@ namespace App_GLF
             mskPhone.Text = "";
             txtLastname.Text = "";
         }
+
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -115,24 +119,25 @@ namespace App_GLF
 
         private void tsbSalvar_Click(object sender, EventArgs e)
         {
-            strSql = "insert into Person (idper, firstname, lastname, CC, phone) values (@idper, @firstname, @lastname, @CC, @phone)";
-            sqlCon = new SqlConnection(strCon);
-            SqlCommand comando = new SqlCommand(strSql, sqlCon);
+            
+            string strSql = "insert into Person (idper, firstname, lastname, CC, phone, age) values (@idper, @firstname, @lastname, @CC, @phone, @age)";
+            SqlCommand comando = new SqlCommand(strSql, CN);
 
             /*Gerar ID unico*/
             string uniqueIdper = Guid.NewGuid().ToString();
             MessageBox.Show("Novo ID Gerado Com Sucesso:   " + uniqueIdper);
             txtId.Text = uniqueIdper;
 
-            comando.Parameters.Add("@idper", SqlDbType.VarChar).Value = txtId.Text;
-            comando.Parameters.Add("@firstname", SqlDbType.VarChar).Value = txtFirstname.Text;
-            comando.Parameters.Add("@lastname", SqlDbType.VarChar).Value = txtLastname.Text;
-            comando.Parameters.Add("@CC", SqlDbType.VarChar).Value = mskCC.Text;
-            comando.Parameters.Add("@phone", SqlDbType.VarChar).Value = mskPhone.Text;
+            comando.Parameters.Add("@idper", SqlDbType.VarChar,50).Value = txtId.Text;
+            comando.Parameters.Add("@firstname", SqlDbType.VarChar, 50).Value = txtFirstname.Text;
+            comando.Parameters.Add("@lastname", SqlDbType.VarChar, 50).Value = txtLastname.Text;
+            comando.Parameters.Add("@cc", SqlDbType.VarChar, 50).Value = mskCC.Text;
+            comando.Parameters.Add("@phone", SqlDbType.VarChar, 50).Value = mskPhone.Text;
+            comando.Parameters.Add("@age", SqlDbType.VarChar, 50).Value = txtAge.Text;
 
             try
             {
-                sqlCon.Open();
+                CN.Open();
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Cadastro Realizado com Sucesso!");
             }
@@ -142,9 +147,8 @@ namespace App_GLF
             }
             finally
             {
-                sqlCon.Close();
+                CN.Close();
             }
-
             tsbNovo.Enabled = true;
             tsbSalvar.Enabled = false;
             tsbAlterar.Enabled = false;
@@ -166,8 +170,6 @@ namespace App_GLF
             mskPhone.Text = "";
             txtLastname.Text = "";
             idParaBuscar.Text = "";
-
-
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -177,22 +179,19 @@ namespace App_GLF
 
         private void tsbBuscar_Click(object sender, EventArgs e)
         {
-            strSql = "select * from person where idper=@idper";
-            sqlCon = new SqlConnection(strCon);
-            SqlCommand comando = new SqlCommand(strSql, sqlCon);
+            string strSql = "select * from person where idper=@idper";
+            SqlCommand comando = new SqlCommand(strSql, CN);
 
-            //comando.Parameters.Add("idper", SqlDbType.VarChar).Value = tstIdBuscar.Text;
             comando.Parameters.AddWithValue("@idper", idParaBuscar.Text);
 
             try
             {
-                if (idParaBuscar.Text == string.Empty)
+                CN.Open();
+                if (tstIdBuscar.Text == string.Empty)
                 {
                     throw new Exception("Voce precisa digitar um id!");
                 }
-
-                sqlCon.Open();
-
+                comando.Connection = CN;
                 SqlDataReader dr = comando.ExecuteReader();
 
                 dr.Read();
@@ -207,7 +206,7 @@ namespace App_GLF
                 txtLastname.Text = Convert.ToString(dr["lastname"]);
                 mskCC.Text = Convert.ToString(dr["CC"]);
                 mskPhone.Text = Convert.ToString(dr["phone"]);
-                // txtAge.Text = Convert.ToString(dr["age"]);
+                txtAge.Text = Convert.ToString(dr["age"]);
             }
             catch (Exception ex)
             {
@@ -215,9 +214,8 @@ namespace App_GLF
             }
             finally
             {
-                sqlCon.Close();
+                CN.Close();
             }
-
             tsbNovo.Enabled = false;
             tsbSalvar.Enabled = false;
             tsbAlterar.Enabled = true;
@@ -236,7 +234,6 @@ namespace App_GLF
             txtFirstname.Focus();
 
         }
-
         private void button7_Click(object sender, EventArgs e)
         {
             /*Gerar ID unico*/
@@ -261,19 +258,37 @@ namespace App_GLF
         }
         private void carregarRotas()
         {
-            strSql = "select * from route";
-            sqlCon = new SqlConnection(strCon);
-            SqlCommand cmd = new SqlCommand(strSql, sqlCon);
-            sqlCon.Open();
-
-            SqlDataReader dr = cmd.ExecuteReader();
-
+            String strSql = "select * from route";
+            SqlCommand comando = new SqlCommand(strSql, CN);
+            CN.Open();
+            SqlDataReader dr = comando.ExecuteReader();
+            //dgRotas
             while (dr.Read())
             {
                 listaRotas.Items.Add(dr["name"]);
             }
+            CN.Close();
 
-            sqlCon.Close();
+            String strSql2 = "select [Route].[name] as Rota,Horario.horaPartida as Partida, Horario.horaChegada as Chegada, [Route].preco from (Horario join [Route] on Horario.idHora=[Route].idHora)";
+            SqlCommand com = new SqlCommand(strSql2, CN);
+            CN.Open();
+            SqlDataAdapter sqlDataAdap = new SqlDataAdapter(com);
+            DataTable dtRecord = new DataTable();
+            sqlDataAdap.Fill(dtRecord);
+            dgRotas.DataSource = dtRecord;
+            CN.Close();
+        }
+
+        private void carregarUsuarios()
+        {
+            String strSql = "select * from Person";
+            SqlCommand comando = new SqlCommand(strSql, CN);
+            CN.Open();
+            SqlDataAdapter sqlDataAdap = new SqlDataAdapter(comando);
+            DataTable dtRecord = new DataTable();
+            sqlDataAdap.Fill(dtRecord);
+            dgPessoas.DataSource = dtRecord;
+            CN.Close();
         }
 
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
@@ -291,12 +306,10 @@ namespace App_GLF
 
         private void tsbAlterar_Click(object sender, EventArgs e)
         {
-            strSql = "update Person set idper=@idper, firstname=@firstname, lastname=@lastname, CC=@CC, phone=@phone where idper=@IdBuscar";
-            sqlCon = new SqlConnection(strCon);
-            SqlCommand comando = new SqlCommand(strSql, sqlCon);
+            String strSql = "update Person set idper=@idper, firstname=@firstname, lastname=@lastname, CC=@CC, phone=@phone where idper=@IdBuscar";
+            SqlCommand comando = new SqlCommand(strSql, CN);
 
             comando.Parameters.Add("@IdBuscar", SqlDbType.VarChar).Value = txtId.Text;
-
             comando.Parameters.Add("@idper", SqlDbType.VarChar).Value = txtId.Text;
             comando.Parameters.Add("@firstname", SqlDbType.VarChar).Value = txtFirstname.Text;
             comando.Parameters.Add("@lastname", SqlDbType.VarChar).Value = txtLastname.Text;
@@ -305,7 +318,7 @@ namespace App_GLF
 
             try
             {
-                sqlCon.Open();
+                CN.Open();
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Cadastro Atualizado com Sucesso!");
             }
@@ -315,9 +328,8 @@ namespace App_GLF
             }
             finally
             {
-                sqlCon.Close();
+                CN.Close();
             }
-
             tsbNovo.Enabled = true;
             tsbSalvar.Enabled = false;
             tsbAlterar.Enabled = false;
@@ -349,14 +361,13 @@ namespace App_GLF
             }
             else
             {
-                strSql = "delete from Person where idper=@idper";
-                sqlCon = new SqlConnection(strCon);
-                SqlCommand comando = new SqlCommand(strSql, sqlCon);
+                String strSql  = "delete from Person where idper=@idper";
+                SqlCommand comando = new SqlCommand(strSql, CN);
 
                 comando.Parameters.Add("@idper", SqlDbType.VarChar).Value = txtId.Text;
                 try
                 {
-                    sqlCon.Open();
+                    CN.Open();
                     comando.ExecuteNonQuery();
                     MessageBox.Show("Cadastro Pessoal deletado com Sucesso!");
                     txtId.Text = "";
@@ -371,7 +382,7 @@ namespace App_GLF
                 }
                 finally
                 {
-                    sqlCon.Close();
+                    CN.Close();
                 }
             }
 
@@ -408,6 +419,8 @@ namespace App_GLF
             tsbBuscar.Enabled = false;
             txtId.Enabled = true;
             txtFirstname.Enabled = true;
+            txtLastname.Enabled = true;
+            txtAge.Enabled = true;
             mskCC.Enabled = true;
             mskPhone.Enabled = true;
 
@@ -436,6 +449,207 @@ namespace App_GLF
             mskPhone.Text = "";
             txtLastname.Text = "";
             idParaBuscar.Text = "";
+        }
+
+        private void dgPessoas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            /*Botão para confirmação do usuário pelo CC para COMPRA do TICKET!*/
+            string strSql = "select * from person where CC=@CC";
+            SqlCommand comando = new SqlCommand(strSql, CN);
+
+            comando.Parameters.AddWithValue("@CC", psgCCBusca.Text);
+
+            try
+            {
+                CN.Open();
+                if (psgCCBusca.Text == string.Empty)
+                {
+                    throw new Exception("Voce precisa digitar um CC!");
+                }
+                comando.Connection = CN;
+                SqlDataReader dr = comando.ExecuteReader();
+
+                dr.Read();
+
+                if (dr.HasRows == false)
+                {
+                    throw new Exception("CC não cadastrado!");
+                }
+
+                psgIdBusca.Text = Convert.ToString(dr["idper"]);
+                psgFirstname.Text = Convert.ToString(dr["firstname"]);
+                psgLastname.Text = Convert.ToString(dr["lastname"]);
+                psgCCBusca.Text = Convert.ToString(dr["CC"]);
+                psgAge.Text = Convert.ToString(dr["age"]);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
+        private void btnBuscaId_Click(object sender, EventArgs e)
+        {
+            /*Botão para confirmação do usuário pelo ID para COMPRA do TICKET!*/
+            string strSql = "select * from person where idper=@idper";
+            SqlCommand comando = new SqlCommand(strSql, CN);
+
+            comando.Parameters.AddWithValue("@idper", psgIdBusca.Text);
+
+            try
+            {
+                CN.Open();
+                if (psgIdBusca.Text == string.Empty)
+                {
+                    throw new Exception("Voce precisa digitar um Id!");
+                }
+                comando.Connection = CN;
+                SqlDataReader dr = comando.ExecuteReader();
+
+                dr.Read();
+
+                if (dr.HasRows == false)
+                {
+                    throw new Exception("Id não cadastrado!");
+                }
+
+                psgIdBusca.Text = Convert.ToString(dr["idper"]);
+                psgFirstname.Text = Convert.ToString(dr["firstname"]);
+                psgLastname.Text = Convert.ToString(dr["lastname"]);
+                psgCCBusca.Text = Convert.ToString(dr["CC"]);
+                psgAge.Text = Convert.ToString(dr["age"]);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            /*Gerar ID unico*/
+            string uniqueIdper = Guid.NewGuid().ToString();
+            MessageBox.Show("Novo ID Gerado Com Sucesso:   " + uniqueIdper);
+            ticketIdTxt.Text = uniqueIdper;
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            /*Gerar ID unico*/
+            string uniqueIdper = Guid.NewGuid().ToString();
+            MessageBox.Show("Novo ID Gerado Com Sucesso:   " + uniqueIdper);
+            psgIdTxt.Text = uniqueIdper;
+        }
+
+        private void dropHorarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void carregarHorarios()
+        {
+            String strSql = "select distinct [name] from Station";
+            SqlCommand comando = new SqlCommand(strSql, CN);
+            CN.Open();
+            SqlDataReader dr = comando.ExecuteReader();
+
+            while (dr.Read())
+            {
+                dropHorarios.Items.Add(dr["name"]);
+            }
+            CN.Close();
+        }
+
+        private void textBox1_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TicketForm_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

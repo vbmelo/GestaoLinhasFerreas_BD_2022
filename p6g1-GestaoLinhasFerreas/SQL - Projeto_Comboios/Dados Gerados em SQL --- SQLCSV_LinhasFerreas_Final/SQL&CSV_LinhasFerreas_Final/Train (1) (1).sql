@@ -1,0 +1,7 @@
+use Comboios5;
+INSERT INTO Train(trainid,[name],capacity,track,did,idHora,rid) VALUES ('4bc2c8dc-dada-40c7-bf93-3eaca38ae403','Thoughtbeat',8,47,'f97d67b7-ce77-457f-b321-5192c82c3b6e','b7ccc4c4-faa2-4596-8954-bbd2748f8a99','3016c3e5-c2c4-4c31-b82f-8ad893b8f7d8');
+INSERT INTO Train(trainid,[name],capacity,track,did,idHora,rid) VALUES ('68bf014d-3d61-449d-81f5-ce2f3374f35e','Blogtags',47,73,'8d7ae3c6-4d66-443a-a7b6-802845c3c353','4c80e63e-8f42-4047-9dd8-abdc684fce0c','18c81eb0-679f-4065-9e83-45dfe1e7e502');
+INSERT INTO Train(trainid,[name],capacity,track,did,idHora,rid) VALUES ('14e6faa2-8a7b-489f-a6ca-a6bcf2ea9807','Tanoodle',59,54,'7e37b250-24c0-440d-a0b3-4b659008cf1f','961e73c9-d053-4de0-8846-e24085333961','18c81eb0-679f-4065-9e83-45dfe1e7e502');
+INSERT INTO Train(trainid,[name],capacity,track,did,idHora,rid) VALUES ('9c3f00f3-e968-4c9d-aedb-3a460e5f0ba6','Jaxnation',23,33,'f97d67b7-ce77-457f-b321-5192c82c3b6e','00465803-1cc3-48e4-9c83-c1091fab8445','ff6378e5-faa8-4b44-8a7e-6864fee8d0d2');
+INSERT INTO Train(trainid,[name],capacity,track,did,idHora,rid) VALUES ('cb6c2bdc-15be-4037-84f7-9128e586efd8','Aimbo',48,28,'e0761e89-8c09-40ec-bf86-2191a10af973','f90bbdb4-8f2d-4f65-bc68-5a6be0c0f683','3016c3e5-c2c4-4c31-b82f-8ad893b8f7d8');
+INSERT INTO Train(trainid,[name],capacity,track,did,idHora,rid) VALUES ('dd24f13d-d598-47f7-a097-778bce7e33ee','Minyx',70,93,'86bad00a-11fb-4a4e-86c8-340447335123','3ae7d8c4-e93c-440c-a786-90331b2f35a2','18c81eb0-679f-4065-9e83-45dfe1e7e502');

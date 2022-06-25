@@ -1,0 +1,22 @@
+use Comboios2;
+
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('f74b8a4c-7a30-44fb-8b06-37049361e779','Babblestorm',82,'79b63958-6828-4180-97bf-08f46b80e250','c14f04dd-3aa4-4300-b91e-0f08b9eb3957');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('e2c44e7f-dbba-4a9c-9909-139470b76190','Gabvine',85,'d061f124-7517-400e-b9fb-fdd6352bf3e4','5bb295bb-ba0b-4e22-b2ef-a7a8d0354c77');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('69851db0-2785-4f33-adfa-0fef400aec30','Livefish',100,'c93ce4bc-3132-4b7d-a594-a6273ef0c0a1','5422f2f1-7a17-4e06-abb2-c28e490d1163');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('d249d718-633f-4a11-a0c6-141c9161cb3e','Centidel',16,'4ed47966-51fe-4e1c-ad0c-aaa33f1a8d59','bd019e21-6293-4da0-a6b4-aa2d9efcc817');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('a4562d98-a79c-4240-9598-7b13588838bf','Edgepulse',61,'1ebcbd3e-415e-42ba-8abe-21da6e4f4dec','b11ea690-8507-4b4f-9935-4008d4340646');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('2072ce48-b5eb-410e-ad3d-0b9acb11db14','Zooxo',100,'1905054c-2b75-4a52-a8fb-d2467d549956','5220f4c6-818a-4e44-a92d-e43e03b8ee6d');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('a23eaa16-3abc-452c-880b-d70c5ff95282','Quimm',73,'1ebcbd3e-415e-42ba-8abe-21da6e4f4dec','60d90632-3a88-4114-bc71-5d2761fc6a36');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('0e6fee34-3e56-469e-ada1-47dd8f769cb0','Vinder',64,'1905054c-2b75-4a52-a8fb-d2467d549956','60d90632-3a88-4114-bc71-5d2761fc6a36');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('c1aff3c3-85bf-4cc0-a1ad-cabbfdc1af28','Voonix',76,'0411e343-9092-4817-8711-1c0ab1291116','c771ffa7-917b-411b-9602-c76f4f807b67');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('d186784a-2965-4a57-930f-3fe55e83ca08','Rhyloo',14,'0411e343-9092-4817-8711-1c0ab1291116','1be493f0-600e-4481-9774-1919c3f15387');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('6e67c97e-f6f6-40c5-a1f1-1ff91847e0ad','Oba',64,'630f5c2f-6f79-4daf-9524-100f83c8a501','643dc6e6-7cc1-4b23-80f8-b88b5a7c6b89');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('92299ebe-260b-4bd8-a0ca-fee389f618b0','Trudeo',73,'9422dd71-7fda-4f6a-931e-1cf261c03afc','2d464d98-df80-4c18-a5ce-15df28fd1bbf');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('85e260f9-00c6-4f16-95e7-2e212ac54d92','Aimbo',59,'4ed84a7d-9504-41c3-9385-7262a51a82d4','5422f2f1-7a17-4e06-abb2-c28e490d1163');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('6610d0bf-fa8f-49ca-a067-adb37989a095','Quaxo',1,'d061f124-7517-400e-b9fb-fdd6352bf3e4','c8b35fa4-c838-445a-bd1d-06648642f258');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('305f32df-53c0-44d5-a18b-9af4b4e62796','Ainyx',9,'1ebcbd3e-415e-42ba-8abe-21da6e4f4dec','ed980c95-d9e4-42a6-ad4c-8151455f10d1');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('3c032c1f-e935-4354-9ce3-b53c7f0cb5da','Photospace',53,'9422dd71-7fda-4f6a-931e-1cf261c03afc','842b4194-74ad-4160-a8a0-19d69df60935');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('b647128f-c621-4ea2-8b84-4de194750c45','Kwilith',5,'856b4464-05b2-45a2-b5fa-35657e010460','bd019e21-6293-4da0-a6b4-aa2d9efcc817');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('d98cc960-11de-4c06-95e8-8acb0e38acd0','Mydeo',88,'d061f124-7517-400e-b9fb-fdd6352bf3e4','2d464d98-df80-4c18-a5ce-15df28fd1bbf');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('1d96c64b-c591-4b02-840e-d2240fb72bf9','Centidel',46,'772363e9-fe2f-46e1-b8f7-b44121abdc78','5220f4c6-818a-4e44-a92d-e43e03b8ee6d');
+INSERT INTO Train(trainid,[name],capacity,did,trid) VALUES ('3d667dd3-dbbb-4a19-b405-5119d3ba4606','Wordware',35,'b9a07014-b651-46fc-9c56-e4e708aaea8c','5220f4c6-818a-4e44-a92d-e43e03b8ee6d');

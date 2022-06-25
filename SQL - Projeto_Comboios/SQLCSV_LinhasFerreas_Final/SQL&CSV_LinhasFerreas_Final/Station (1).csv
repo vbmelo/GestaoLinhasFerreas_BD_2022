@@ -1,0 +1,19 @@
+[sid],[name],[location],rid,city
+ae377a37-2106-4e26-9bb9-3d03c2adf4a7,EstacaoDeLeiria,65 Blue Bill Park Center,18c81eb0-679f-4065-9e83-45dfe1e7e502,Leiria
+c714ad7e-b2b5-47ed-a0e5-58af4f271e4f,EstacaoDeBraga,75853 Mandrake Park,8f46bd39-b579-4bcd-a2ab-148e8f3de1e5,Braga
+c7e98745-25a3-4f15-8fc5-f55b858305d2,EstacaoDeBraganca,7 Parkside Road,a5a9ef79-0901-42b3-b7f7-adefb9eced63,Braganca
+e393d75a-2f6f-4bf2-a0b4-61a96bd31b9f,EstacaoDePorto,9 Park Meadow Court,bc4f5520-29d4-4018-86af-390ef07a7fcf,Porto
+b0268c83-2ebc-413f-a488-6074b2c3bcd7,EstacaoDeLisboa,85085 Village Circle,ff6378e5-faa8-4b44-8a7e-6864fee8d0d2,Lisboa
+0fc7cd3d-497a-4d4e-8c78-cf6b85464de3,EstacaoDeSantarem,32764 Dayton Crossing,c53f26ea-5f32-4f02-a53f-1647a1132bea,Santarem
+aafead39-6970-49c1-aaef-50b60a2961f4,EstacaoDeVilaReal,4537 Carberry Center,8eec6c8c-8faa-4eed-a6ee-46ead1df851e,VilaReal
+6b07fcfe-9298-462a-a0ce-bda2ba33a4fe,EstacaoDeCoimbra,47 Sloan Road,c41f7b99-1e98-4a0c-84a4-82c77c10dee2,Coimbra
+68121d41-90eb-4d3e-afa8-ae3c15ee5c12,EstacaoDeViseu,6 Dayton Park,ee7291ac-0dbe-44de-9f1a-5e531cfdad06,Viseu
+2ec24fe7-4f03-455a-9109-568f061a4a47,EstacaoDeEvora,5357 Superior Place,3016c3e5-c2c4-4c31-b82f-8ad893b8f7d8,Evora
+ef929bf7-008b-4381-80b6-d9b644b0261f,EstacaoDeFaro,7723 Memorial Center,18c81eb0-679f-4065-9e83-45dfe1e7e502,Faro
+372bacdd-c808-4884-a606-5eb9aa433240,EstacaoDeViana do Castelo,98 Transport Way,8f46bd39-b579-4bcd-a2ab-148e8f3de1e5,Viana do Castelo
+a214106b-c061-4aa1-b033-751335cd9a5b,EstacaoDeAveiro,963 Sachtjen Plaza,a5a9ef79-0901-42b3-b7f7-adefb9eced63,Aveiro
+eb717e21-10db-423d-a65d-97da6b0efd40,EstacaoDeBeja,4061 Hintze Pass,bc4f5520-29d4-4018-86af-390ef07a7fcf,Beja
+8ef0c326-d3a2-40e3-aef9-1c97ee5967cd,EstacaoDeGuarda,1 Buena Vista Street,ff6378e5-faa8-4b44-8a7e-6864fee8d0d2,Guarda
+ce84bda8-bc60-4e42-8008-ce4051e89ced,EstacaoDeCastelo Branco,30913 Paget Way,c53f26ea-5f32-4f02-a53f-1647a1132bea,Castelo Branco
+d94005f4-dad8-4140-810f-1211bfce1c1a,EstacaoDeSetubal,82431 Warbler Road,8eec6c8c-8faa-4eed-a6ee-46ead1df851e,Setubal
+d6ecd430-6a5d-4e02-92b4-2ceaf10d0704,EstacaoDePortalegre,12179 Pepper Wood Place,c41f7b99-1e98-4a0c-84a4-82c77c10dee2,Portalegre

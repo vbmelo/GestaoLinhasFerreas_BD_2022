@@ -29,126 +29,159 @@ namespace App_GLF
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Texto de teste");
+            this.components = new System.ComponentModel.Container();
             this.button9 = new System.Windows.Forms.Button();
-            this.listaTipoDados = new System.Windows.Forms.ListBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.listaTabelas = new System.Windows.Forms.ListBox();
+            this.valorParaBusca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textoParaBusca = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.dropField = new System.Windows.Forms.ComboBox();
+            this.comboios5DataSet = new App_GLF.Comboios5DataSet();
+            this.comboios5DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.driverBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.driverTableAdapter = new App_GLF.Comboios5DataSetTableAdapters.DriverTableAdapter();
+            this.dropTable = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboios5DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboios5DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button9
             // 
             this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(823, 148);
+            this.button9.Location = new System.Drawing.Point(893, 673);
             this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(112, 36);
-            this.button9.TabIndex = 7;
+            this.button9.Size = new System.Drawing.Size(112, 26);
+            this.button9.TabIndex = 11;
             this.button9.Text = "Pesquisar";
             this.button9.UseVisualStyleBackColor = true;
-            // 
-            // listaTipoDados
-            // 
-            this.listaTipoDados.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.listaTipoDados.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listaTipoDados.FormattingEnabled = true;
-            this.listaTipoDados.ItemHeight = 22;
-            this.listaTipoDados.Items.AddRange(new object[] {
-            "id",
-            "Cartão de Cidadão",
-            "Nome",
-            "Sobrenome"});
-            this.listaTipoDados.Location = new System.Drawing.Point(430, 92);
-            this.listaTipoDados.Margin = new System.Windows.Forms.Padding(4);
-            this.listaTipoDados.Name = "listaTipoDados";
-            this.listaTipoDados.Size = new System.Drawing.Size(210, 26);
-            this.listaTipoDados.TabIndex = 6;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
             // label15
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(308, 92);
+            this.label15.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.label15.Location = new System.Drawing.Point(298, 30);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(114, 22);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "tipo de dado:";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+            this.label15.Size = new System.Drawing.Size(122, 22);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Pesquisar por:";
             // 
-            // listaTabelas
+            // valorParaBusca
             // 
-            this.listaTabelas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.listaTabelas.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listaTabelas.FormattingEnabled = true;
-            this.listaTabelas.ItemHeight = 22;
-            this.listaTabelas.Items.AddRange(new object[] {
-            "Estação",
-            "----------",
-            "Condutor",
-            "",
-            "",
-            "Funcionário ",
-            "Passageiro"});
-            this.listaTabelas.Location = new System.Drawing.Point(134, 92);
-            this.listaTabelas.Margin = new System.Windows.Forms.Padding(4);
-            this.listaTabelas.Name = "listaTabelas";
-            this.listaTabelas.Size = new System.Drawing.Size(166, 26);
-            this.listaTabelas.TabIndex = 4;
-            this.listaTabelas.SelectedIndexChanged += new System.EventHandler(this.listBox6_SelectedIndexChanged);
+            this.valorParaBusca.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.valorParaBusca.Location = new System.Drawing.Point(719, 32);
+            this.valorParaBusca.Margin = new System.Windows.Forms.Padding(4);
+            this.valorParaBusca.Name = "valorParaBusca";
+            this.valorParaBusca.Size = new System.Drawing.Size(286, 27);
+            this.valorParaBusca.TabIndex = 26;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 92);
+            this.label1.Location = new System.Drawing.Point(22, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 22);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Pesquisar Por:";
+            this.label1.Size = new System.Drawing.Size(47, 22);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Tipo:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textoParaBusca
-            // 
-            this.textoParaBusca.Location = new System.Drawing.Point(759, 97);
-            this.textoParaBusca.Margin = new System.Windows.Forms.Padding(4);
-            this.textoParaBusca.Name = "textoParaBusca";
-            this.textoParaBusca.Size = new System.Drawing.Size(176, 23);
-            this.textoParaBusca.TabIndex = 50;
-            this.textoParaBusca.Text = "dado";
-            this.textoParaBusca.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(660, 96);
+            this.label2.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.label2.Location = new System.Drawing.Point(656, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 22);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "Introduzir:";
+            this.label2.Size = new System.Drawing.Size(62, 22);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "inserir:";
             // 
-            // listView1
+            // dgv1
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(17, 203);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(918, 443);
-            this.listView1.TabIndex = 52;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.dgv1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Location = new System.Drawing.Point(26, 90);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.Size = new System.Drawing.Size(979, 562);
+            this.dgv1.TabIndex = 29;
+            this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellContentClick);
+            // 
+            // dropField
+            // 
+            this.dropField.FormattingEnabled = true;
+            this.dropField.Items.AddRange(new object[] {
+            "Whole Table Content",
+            "idper",
+            "firstname",
+            "lastname",
+            "CC",
+            "phone",
+            "age",
+            "pid",
+            "did",
+            "idHora",
+            "dia",
+            "rid",
+            "[name]",
+            "[sid]",
+            "trainid",
+            "eid",
+            "tid"});
+            this.dropField.Location = new System.Drawing.Point(417, 32);
+            this.dropField.Name = "dropField";
+            this.dropField.Size = new System.Drawing.Size(232, 26);
+            this.dropField.TabIndex = 31;
+            this.dropField.SelectedIndexChanged += new System.EventHandler(this.dropField_SelectedIndexChanged);
+            // 
+            // comboios5DataSet
+            // 
+            this.comboios5DataSet.DataSetName = "Comboios5DataSet";
+            this.comboios5DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboios5DataSetBindingSource
+            // 
+            this.comboios5DataSetBindingSource.DataSource = this.comboios5DataSet;
+            this.comboios5DataSetBindingSource.Position = 0;
+            // 
+            // driverBindingSource
+            // 
+            this.driverBindingSource.DataMember = "Driver";
+            this.driverBindingSource.DataSource = this.comboios5DataSetBindingSource;
+            // 
+            // driverTableAdapter
+            // 
+            this.driverTableAdapter.ClearBeforeFill = true;
+            // 
+            // dropTable
+            // 
+            this.dropTable.FormattingEnabled = true;
+            this.dropTable.Items.AddRange(new object[] {
+            "Driver",
+            "Employee",
+            "Horario",
+            "Passenger",
+            "Person",
+            "Route",
+            "Station",
+            "Ticket",
+            "Train"});
+            this.dropTable.Location = new System.Drawing.Point(74, 32);
+            this.dropTable.Name = "dropTable";
+            this.dropTable.Size = new System.Drawing.Size(217, 26);
+            this.dropTable.TabIndex = 32;
+            this.dropTable.SelectedIndexChanged += new System.EventHandler(this.dropTable_SelectedIndexChanged);
             // 
             // PesquisaForm
             // 
@@ -156,14 +189,14 @@ namespace App_GLF
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(1030, 724);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.dropTable);
+            this.Controls.Add(this.dropField);
+            this.Controls.Add(this.dgv1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textoParaBusca);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.valorParaBusca);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.listaTipoDados);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.listaTabelas);
             this.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -171,6 +204,11 @@ namespace App_GLF
             this.Name = "PesquisaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PesquisaForm";
+            this.Load += new System.EventHandler(this.PesquisaForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboios5DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboios5DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,12 +217,16 @@ namespace App_GLF
         #endregion
 
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.ListBox listaTipoDados;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ListBox listaTabelas;
+        private System.Windows.Forms.TextBox valorParaBusca;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textoParaBusca;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.DataGridView dgv1;
+        private System.Windows.Forms.ComboBox dropField;
+        private System.Windows.Forms.BindingSource comboios5DataSetBindingSource;
+        private Comboios5DataSet comboios5DataSet;
+        private System.Windows.Forms.BindingSource driverBindingSource;
+        private Comboios5DataSetTableAdapters.DriverTableAdapter driverTableAdapter;
+        private System.Windows.Forms.ComboBox dropTable;
     }
 }

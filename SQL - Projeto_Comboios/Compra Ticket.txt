@@ -1,0 +1,17 @@
+Editar tabela horario
+	ter data, hora de saida e hora de chegada
+
+Ticket precisa ->
+1 - gerar um passageiro a partir dos dados de Person pelo CC
+3 - pegar o id do employee que vendeu
+2 - ID da estação atravez da rota
+3 - ID do passageiro atravez da geração automática
+4 - id do trem (pode ser select pela rota)
+5 - idHora atravez do trem
+6 - nome da rota
+
+date buscado no idHora
+assim como hora de partida
+e a hora de chegada
+carriage
+seatNumber

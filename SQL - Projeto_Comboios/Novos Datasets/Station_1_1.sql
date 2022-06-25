@@ -1,0 +1,24 @@
+CREATE TABLE Station(
+   aebe6943c45e457a81a7af3dafd05135 VARCHAR(36) NOT NULL PRIMARY KEY
+  ,EstacaoDeLeiria                  VARCHAR(25) NOT NULL
+  ,3_Mayfield_Junction              VARCHAR(22) NOT NULL
+  ,4d26f9bcea894c018788cf3fbfddfbd5 VARCHAR(36) NOT NULL
+  ,Leiria                           VARCHAR(16) NOT NULL
+);
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('4bc8d92c-2105-4a14-aefe-06f5cfceba70','EstacaoDeBraga','6550 Hallows Avenue','8bb09adf-057d-4997-a7b9-d1ac7e6e900d','Braga');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('242e52d2-c56a-45ee-8db5-d5b7bd559f12','EstacaoDeBraganca','95597 Leroy Pass','ee7cc67b-6aa7-4cff-8b1e-06bcdc77d2a9','Braganca');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('ea0aa8df-7db1-40c1-b3ea-35d54282df97','EstacaoDePorto','917 Randy Lane','97186822-6bb1-4927-aeb2-eed10107526e','Porto');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('88a0e441-df81-41b9-870f-8e97c3bc0ac6','EstacaoDeLisboa','87877 Pawling Pass','0d8b6bfd-4f8c-4579-873a-e4be12cdba5a','Lisboa');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('93b49385-3fd2-4602-9257-38dc0739a536','EstacaoDeSantarem','05 Mallory Terrace','0c3230aa-16f9-4a9b-a2d6-03ffe10739ec','Santarem');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('2a8b3aa4-6802-436b-b459-daec3a8e12e2','EstacaoDeVilaReal','54 Stoughton Junction','834e8383-508d-41b2-bd01-16f89c5595b7','VilaReal');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('cbceb606-5ca4-4fcd-b2fa-b9cbcc1d80fa','EstacaoDeCoimbra','304 Hanover Center','377bff23-f098-4c16-a24a-88e8ca4243c4','Coimbra');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('e201b103-548d-4bb8-a0a3-00a87aa5f83e','EstacaoDeViseu','42 Kedzie Road','3b4ed25c-6d27-4cb3-988e-97979a83084a','Viseu');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('26a70a09-48d8-4a12-8777-210b77c21b6e','EstacaoDeEvora','27760 Graceland Avenue','f98bac60-3893-474f-8d51-db757d9197bb','Evora');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('58243cc8-a03b-4343-91bc-f0168837d30f','EstacaoDeFaro','360 Fallview Drive','ddb0897a-b427-4196-99a5-6fcd4fbb7db7','Faro');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('2fcf69db-fbd5-403f-9e94-8bf934f9a681','EstacaoDeViana do Castelo','1 Miller Park','29870aca-dad4-417b-9bd5-3bd23c93d25d','Viana do Castelo');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('44607507-9cb2-4599-aae2-d0360d9a6e6f','EstacaoDeAveiro','899 Boyd Junction','524528de-4293-42f0-b5e6-4d556fda2aac','Aveiro');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('25526398-35c8-436e-b845-4dff9305d344','EstacaoDeBeja','5 Orin Hill','2f96d803-d741-4590-ad6d-28cd407a4a78','Beja');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('e951f6aa-7290-4433-a8f6-a96236955695','EstacaoDeGuarda','97705 Gina Street','2003c225-44fb-4496-8c22-ca57f66768c2','Guarda');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('2d046b37-7b30-44af-b293-49a52ec477cf','EstacaoDeCastelo Branco','5659 Killdeer Road','21e073ea-6376-4c85-9483-e808359cf161','Castelo Branco');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('3555ce1d-8145-4915-8c9e-36d260bd8bc0','EstacaoDeSetubal','1 Bayside Point','e5c0bd54-9983-45d3-b9f2-f23986f0a0a4','Setubal');
+INSERT INTO Station(aebe6943c45e457a81a7af3dafd05135,EstacaoDeLeiria,3_Mayfield_Junction,4d26f9bcea894c018788cf3fbfddfbd5,Leiria) VALUES ('0634fb3e-e002-4a4f-be81-dc615ef14d8c','EstacaoDePortalegre','3795 Talisman Alley','f482b2a7-39a0-42af-b458-b5ae8e12c056','Portalegre');

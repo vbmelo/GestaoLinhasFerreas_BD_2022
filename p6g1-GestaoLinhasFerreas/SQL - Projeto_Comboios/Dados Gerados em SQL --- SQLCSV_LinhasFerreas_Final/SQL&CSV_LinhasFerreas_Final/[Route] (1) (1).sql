@@ -1,0 +1,11 @@
+use Comboios5;
+INSERT INTO [Route]([rid],[[name]],idHora,preco) VALUES ('18c81eb0-679f-4065-9e83-45dfe1e7e502','Garwin','4c80e63e-8f42-4047-9dd8-abdc684fce0c',46);
+INSERT INTO [Route]([rid],[[name]],idHora,preco) VALUES ('8f46bd39-b579-4bcd-a2ab-148e8f3de1e5','Ransell','3a24260c-a75a-404b-92dd-7790c7ded8aa',86);
+INSERT INTO [Route]([rid],[[name]],idHora,preco) VALUES ('a5a9ef79-0901-42b3-b7f7-adefb9eced63','Yancey','e515194e-fef2-4fee-8a65-f97c864bc258',48);
+INSERT INTO [Route]([rid],[[name]],idHora,preco) VALUES ('bc4f5520-29d4-4018-86af-390ef07a7fcf','Rolando','00465803-1cc3-48e4-9c83-c1091fab8445',12);
+INSERT INTO [Route]([rid],[[name]],idHora,preco) VALUES ('ff6378e5-faa8-4b44-8a7e-6864fee8d0d2','Connor','b7ccc4c4-faa2-4596-8954-bbd2748f8a99',36);
+INSERT INTO [Route]([rid],[[name]],idHora,preco) VALUES ('c53f26ea-5f32-4f02-a53f-1647a1132bea','Ilka','961e73c9-d053-4de0-8846-e24085333961',80);
+INSERT INTO [Route]([rid],[[name]],idHora,preco) VALUES ('8eec6c8c-8faa-4eed-a6ee-46ead1df851e','Trever','3ae7d8c4-e93c-440c-a786-90331b2f35a2',69);
+INSERT INTO [Route]([rid],[[name]],idHora,preco) VALUES ('c41f7b99-1e98-4a0c-84a4-82c77c10dee2','Dillie','961e73c9-d053-4de0-8846-e24085333961',74);
+INSERT INTO [Route]([rid],[[name]],idHora,preco) VALUES ('ee7291ac-0dbe-44de-9f1a-5e531cfdad06','Jodee','3be4f680-a63d-491b-83e9-faecad62aba8',84);
+INSERT INTO [Route]([rid],[[name]],idHora,preco) VALUES ('3016c3e5-c2c4-4c31-b82f-8ad893b8f7d8','Erinna','e252312c-bc00-4c27-a57c-762eb234c81f',22);
